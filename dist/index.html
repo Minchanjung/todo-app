@@ -13,8 +13,32 @@
         <h1 id="logo">To-Do</h1>
     </div>
     <div class="body" id="bodyContainer">
-        <div class="body" id="sideBar"></div>
-        <div class="body" id="mainContent"></div>
+        <div class="body" id="sideBar">
+            <h3 id="sidebarHeader">Projects</h3>
+            <div class="projectTabs" id="all">All Tasks</div>
+            <button class="projectTabs" id="newProject">+ Add Project</button>
+            <div id="addProjectPopup">
+                <input id="projectInput">
+                <div id="projectButtonContainer">
+                    <button class="button" id="projectCancel">Cancel</button>
+                    <button class="button" id="projectSubmit">Submit</button>
+                </div>
+            </div>
+        </div>
+        <div class="body" id="mainContent">
+            <div id="taskContainer">
+                <h2 id="mainHeader">Tasks</h2>
+                <button id="newTask">+ Add Task</button>
+                <div id="addTaskPopup">
+                    <input id="taskInput">
+                    <input id="taskDescription">
+                    <div id="taskButtonContainer">
+                        <button class="button" id="taskCancel">Cancel</button>
+                        <button class="button" id="taskSubmit">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div id="footer"></div>
 </body>

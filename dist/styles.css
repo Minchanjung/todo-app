@@ -1,6 +1,7 @@
 html, body {
     padding: 0;
     margin: 0;
+    font-family:'Roboto',sans-serif;
 }
 
 #headerContainer {
@@ -9,7 +10,8 @@ html, body {
     left:0;
     right: 0;
     display: flex;
-    background-color: gray;
+    background-color: rgb(250, 217, 98);
+    align-items: center;
 }
 
 #logo {
@@ -29,13 +31,126 @@ html, body {
 }
 
 #sideBar {
-    background-color: black;
+    background-color: rgb(202, 202, 202);
     margin: 0;
     width: 20em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*#sidebarHeader {
+
+}*/
+
+.projectTabs {
+    border-radius: 5px;
+    width: 85%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.projectTabs:hover {
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+}
+
+/*#newProject {
+    text-align: center;
+}*/
+
+#newProject{
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color: black;
+    text-align:center;
+    transition: all 0.2s;
+    background-color: rgba(255, 255, 255, 0);
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+#newProject:hover{
+    color:#000000;
+    background-color:#FFFFFF;
+}
+
+#addProjectPopup {
+    display: none;
+    border-radius: 5px;
+    width: 85%;
+    border-style: solid;
+    padding-bottom: 1em;
+    border-width: 1px;
+}
+
+#projectInput {
+    width: 97%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 0.5em;
+}
+
+#projectButtonContainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#projectCancel, #projectSubmit {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2em;
+}
+
+#projectCancel {
+    background-color: red;
+}
+
+#projectSubmit {
+    background-color: #4CAF50;
 }
 
 #mainContent {
     background-color: blanchedalmond;
     height: 100%;
     width: 78%;
+}
+
+#taskContainer {
+    display: flex;
+    flex-direction: column;
+    margin-right: 8em;
+    margin-left: 8em;
+}
+
+#mainHeader {
+    padding-bottom: 0.5em;
+    border-width: 1px;
+    border-bottom: 1px, solid, black;
+}
+
+#newTask {
+    padding-left: 1em;
+    border-radius: 5px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#newTask:hover {
+    background-color: rgb(214, 214, 214);
+}
+
+#addTaskPopup {
+    display: none;
 }
