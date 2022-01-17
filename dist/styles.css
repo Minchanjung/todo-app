@@ -4,6 +4,10 @@ html, body {
     font-family:'Roboto',sans-serif;
 }
 
+textarea:focus, input:focus{
+    outline: none;
+}
+
 #headerContainer {
     height: 5em;
     top: 0;
@@ -45,9 +49,10 @@ html, body {
 
 .projectTabs {
     border-radius: 5px;
-    width: 85%;
+    width: 14em;
     padding-top: 1em;
     padding-bottom: 1em;
+    text-align: center; 
 }
 
 .projectTabs:hover {
@@ -56,16 +61,29 @@ html, body {
     border-style: solid;
 }
 
-/*#newProject {
-    text-align: center;
-}*/
+.projectTabs.active {
+    background-color: wheat;
+}
+
+#customProject {
+    border-radius: 5px;
+    width: 17em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#customProject:hover {
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+}
 
 #newProject{
     display:inline-block;
     padding:0.35em 1.2em;
     border:0.1em solid #FFFFFF;
-    margin:0 0.3em 0.3em 0;
-    border-radius:0.12em;
+    /*margin:0 0.3em 0.3em 0;*/
+    border-radius: 5px;
     box-sizing: border-box;
     text-decoration:none;
     font-family:'Roboto',sans-serif;
@@ -76,6 +94,8 @@ html, body {
     background-color: rgba(255, 255, 255, 0);
     padding-top: 1em;
     padding-bottom: 1em;
+    width: 17em;
+    height: 4em;
 }
 #newProject:hover{
     color:#000000;
@@ -85,10 +105,10 @@ html, body {
 #addProjectPopup {
     display: none;
     border-radius: 5px;
-    width: 85%;
+    width: 75%;
     border-style: solid;
     padding-bottom: 1em;
-    border-width: 1px;
+    border-width: 0px;
 }
 
 #projectInput {
@@ -110,15 +130,15 @@ html, body {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 #projectCancel {
-    background-color: red;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 #projectSubmit {
-    background-color: #4CAF50;
+    background-color: rgba(20, 206, 35, 0.7);
 }
 
 #mainContent {
@@ -140,17 +160,137 @@ html, body {
     border-bottom: 1px, solid, black;
 }
 
-#newTask {
-    padding-left: 1em;
+#allTasks {
+    display: flex;
+    flex-direction: column;
+}
+
+#jsDiv {
+    display: flex;
+    background-color: rgb(245, 245, 245);
     border-radius: 5px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.8em;
+    
+}
+
+/*#checkBox {
+
+}*/
+
+#popUpTitle {
+    margin-left: 2em;
+}
+
+#popUpDate {
+    margin-left: auto;
+    margin-right: 3em;
+}
+
+#xBtn {
+    align-self: flex-end;
+    margin-right: 2em;
+    cursor: pointer;
+}
+
+#newTask {
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color: black;
+    text-align:center;
+    transition: all 0.2s;
+    background-color: rgba(255, 255, 255, 0);
     padding-top: 1em;
     padding-bottom: 1em;
+    width: 10em;
+    align-self: end;
 }
 
 #newTask:hover {
-    background-color: rgb(214, 214, 214);
+    color:#000000;
+    background-color:#FFFFFF;
 }
 
 #addTaskPopup {
     display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 15em;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#taskBox {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 30em;
+    height: 16em;
+    margin: auto;
+    border-radius: 7px;
+    padding: 0.5em;
+    box-shadow: rgba(0, 0, 0, 0.40) 0px 5px 15px;
+}
+
+#taskInput {
+    font-size: larger;
+    padding-top: 0.3em;
+    padding-bottom: 0.5em;
+    border: none;
+}
+
+#taskDescription {
+    font-family: 'Roboto',sans-serif;
+    font-size: medium;
+    resize: none;
+}
+
+#dateTime {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1em;
+}
+
+#date {
+    justify-self: start;
+}
+
+#time {
+    justify-self: start;
+}
+
+#taskButtonContainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#taskCancel, #taskSubmit {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2em;
+    margin-top: 1em;
+}
+
+#taskCancel {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#taskSubmit {
+    background-color: rgba(20, 206, 35, 0.7);
 }

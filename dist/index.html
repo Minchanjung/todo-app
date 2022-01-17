@@ -16,6 +16,9 @@
         <div class="body" id="sideBar">
             <h3 id="sidebarHeader">Projects</h3>
             <div class="projectTabs" id="all">All Tasks</div>
+            <div id="projectsContainer">
+
+            </div>
             <button class="projectTabs" id="newProject">+ Add Project</button>
             <div id="addProjectPopup">
                 <input id="projectInput">
@@ -28,13 +31,24 @@
         <div class="body" id="mainContent">
             <div id="taskContainer">
                 <h2 id="mainHeader">Tasks</h2>
+                <div id="allTasks">
+
+                </div>
                 <button id="newTask">+ Add Task</button>
                 <div id="addTaskPopup">
-                    <input id="taskInput">
-                    <input id="taskDescription">
-                    <div id="taskButtonContainer">
-                        <button class="button" id="taskCancel">Cancel</button>
-                        <button class="button" id="taskSubmit">Submit</button>
+                    <div id="taskBox">
+                        <input id="taskInput" placeholder="Title:">
+                        <textarea id="taskDescription" placeholder="Description:" rows="5"></textarea>
+                        <div id="dateTime">
+                            <div>Date:</div>
+                            <input type="date" id="date">
+                            <div>Time:</div>
+                            <input type="time" id="time">
+                        </div>
+                        <div id="taskButtonContainer">
+                            <button class="button" id="taskCancel">Cancel</button>
+                            <button class="button" id="taskSubmit">Submit</button>
+                        </div>
                     </div>
                 </div>
             </div>
